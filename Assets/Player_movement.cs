@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_controller : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class Player_controller : MonoBehaviour
     private Vector2 mouse_pos_org;
     private Vector2 mouse_pos_now;
     private LineRenderer lr;
+    public float max_fuel = 100;
+    public float fuel = 100;
+    public float fuel_consumption = 1;
+    public Image fuel_bar;
+    public Animator run;
+    public bool on_charge = false;
 
     public float speed = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,74 +22,113 @@ public class Player_controller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         lr = GetComponent<LineRenderer>();
+        run = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        Vector2 direction = Vector2.zero;
+        bool use_fuel = false;
+        if(fuel >0 && on_charge)
         {
-            mouse_pos_org = Input.mousePosition;
-        }
-        if(Input.GetMouseButton(0))
-        {
-            on_clicK = true;
-            mouse_pos_now = Input.mousePosition;
-        }
-        else
-        {
-            on_clicK = false;
-            mouse_pos_now = new Vector2();
-            mouse_pos_org = new Vector2();
-        }
-
-        if (on_clicK)
-        {
-            float distance = Vector2.Distance(mouse_pos_now, mouse_pos_org);
-            distance = Mathf.Clamp(distance, 0, 600);
-            print(distance);
-            Vector2 direction = (mouse_pos_now - mouse_pos_org).normalized;
-            
-            //player moves on outer space. no gravity, only the power of small rocket
-            //use wasd keys
-
-            rb.AddForce(direction * distance * Time.deltaTime * speed * 0.1f);
-            
-            rb.velocity = Vector2.ClampMagnitude(rb.velocity, 10);
-            lr.enabled = true;
-            lr.SetPosition(0, Camera.main.ScreenToWorldPoint(mouse_pos_org) + new Vector3(0,0,3));
-            lr.SetPosition(1, Camera.main.ScreenToWorldPoint(mouse_pos_now) + new Vector3(0,0,3));
-            
-        }
-        else
-        {
-            lr.enabled = false;
+            //set direction with wasd keys
             if (Input.GetKey(KeyCode.W))
             {
-                rb.AddForce(Vector2.up * speed);
+                direction += Vector2.up * 0.8f;
+                use_fuel = true;
+                run.SetBool("on_move", true);
+                if (Mathf.Abs(transform.rotation.z) < 0.03f)
+                {
+                    transform.Rotate(0, 0, -0.2f);
+                }
             }
+
             if (Input.GetKey(KeyCode.S))
             {
-                rb.AddForce(Vector2.down * speed);
+                direction += Vector2.down * 0.8f;
+                use_fuel = true;
+                run.SetBool("on_move", true);
+                if (Mathf.Abs(transform.rotation.z) < 0.03f)
+                {
+                    transform.Rotate(0, 0, 0.2f);
+                }
             }
+
             if (Input.GetKey(KeyCode.A))
             {
-                rb.AddForce(Vector2.left * speed);
+                direction += Vector2.left;
+                use_fuel = true;
+                run.SetBool("on_move", true);
             }
+
+            if (transform.rotation.z != 0)
+            {
+                transform.Rotate(0, 0, -0.6f * transform.rotation.z);
+            }
+
+            if (Input.GetKey(KeyCode.D) && rb.velocity.x < -0.5f)
+            {
+                direction += Vector2.right * 0.9f;
+                use_fuel = true;
+            }
+
             if (Input.GetKey(KeyCode.D))
             {
-                rb.AddForce(Vector2.right * speed);
-            }   
+
+                run.SetBool("move_back", true);
+            }
+            else
+            {
+                run.SetBool("move_back", false);
+            }
+
+            if (direction == Vector2.zero)
+            {
+                run.SetBool("on_move", false);
+            }
+
+            if (rb.velocity.x > -2)
+            {
+                direction += Vector2.left * 0.2f;
+            }
+
+            rb.AddForce(direction * speed);
+
+            if (use_fuel)
+            {
+                fuel -= fuel_consumption * Time.deltaTime;
+            }
+
         }
-        
-    }
-    void OnDrawGizmos()
-    {
-        if (on_clicK)
+        else
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(Camera.main.WorldToScreenPoint(mouse_pos_org), Camera.main.WorldToScreenPoint(mouse_pos_now));
+            run.SetBool("on_move", false);
+            run.SetBool("move_back", false);
+            
+            transform.Rotate(0, 0, -0.6f * transform.rotation.z);
         }
+        fuel += fuel_consumption * Time.deltaTime * 0.3f;
+        
+        fuel = Mathf.Clamp(fuel, 0, max_fuel);
+
+        fuel_bar.fillAmount = Mathf.Lerp(fuel_bar.fillAmount, fuel / max_fuel, 0.1f);
+
+        if (fuel <= 0.1f && on_charge)
+        {
+            on_charge = false;
+            Invoke("set", 1.5f);
+        }
+
+        if (!on_charge)
+        {
+            fuel += fuel_consumption * Time.deltaTime * 0.3f;
+        }
+    }
+
+    void set()
+    {
+        on_charge = true;
     }
 }
 
