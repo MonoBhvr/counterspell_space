@@ -35,7 +35,7 @@ public class Player_controller : MonoBehaviour
             //set direction with wasd keys
             if (Input.GetKey(KeyCode.W))
             {
-                direction += Vector2.up * 1.2f;
+                direction += Vector2.up * 2.2f;
                 use_fuel = true;
                 run.SetBool("on_move", true);
                 if (Mathf.Abs(transform.rotation.z) < 0.03f)
@@ -46,7 +46,7 @@ public class Player_controller : MonoBehaviour
 
             if (Input.GetKey(KeyCode.S))
             {
-                direction += Vector2.down * 1.2f;
+                direction += Vector2.down * 2.2f;
                 use_fuel = true;
                 run.SetBool("on_move", true);
                 if (Mathf.Abs(transform.rotation.z) < 0.03f)
