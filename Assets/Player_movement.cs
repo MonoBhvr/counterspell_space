@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player_controller : MonoBehaviour
+public class Player_movement : MonoBehaviour
 {
     
     private Rigidbody2D rb;
@@ -147,4 +147,3 @@ public class Player_controller : MonoBehaviour
         on_charge = true;
     }
 }
-
