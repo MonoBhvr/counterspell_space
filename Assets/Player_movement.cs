@@ -30,12 +30,12 @@ public class Player_controller : MonoBehaviour
     {
         Vector2 direction = Vector2.zero;
         bool use_fuel = false;
-        if(fuel >0 && on_charge)
+        if(fuel > 0 && on_charge)
         {
             //set direction with wasd keys
             if (Input.GetKey(KeyCode.W))
             {
-                direction += Vector2.up * 0.8f;
+                direction += Vector2.up * 1.2f;
                 use_fuel = true;
                 run.SetBool("on_move", true);
                 if (Mathf.Abs(transform.rotation.z) < 0.03f)
@@ -46,7 +46,7 @@ public class Player_controller : MonoBehaviour
 
             if (Input.GetKey(KeyCode.S))
             {
-                direction += Vector2.down * 0.8f;
+                direction += Vector2.down * 1.2f;
                 use_fuel = true;
                 run.SetBool("on_move", true);
                 if (Mathf.Abs(transform.rotation.z) < 0.03f)
@@ -69,7 +69,7 @@ public class Player_controller : MonoBehaviour
 
             if (Input.GetKey(KeyCode.D) && rb.velocity.x < -0.5f)
             {
-                direction += Vector2.right * 0.9f;
+                direction += Vector2.right * 1f;
                 use_fuel = true;
             }
 
@@ -90,7 +90,7 @@ public class Player_controller : MonoBehaviour
 
             if (rb.velocity.x > -2)
             {
-                direction += Vector2.left * 0.2f;
+                direction += Vector2.left * 0.3f;
             }
 
             rb.AddForce(direction * speed);
