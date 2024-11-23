@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0d9ac437-8dc1-4e9c-81aa-cbc3df91f5fc" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Physics Material 2D.physicsMaterial2D" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Physics Material 2D.physicsMaterial2D" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Universal Render Pipeline Asset_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_movement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Main Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Main Camera Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start_Screen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start_Screen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/camera_controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/camera_controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +32,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/camera_controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/stamina_ui_follow.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -104,7 +102,7 @@
       <updated>1732349144975</updated>
       <workItem from="1732349147202" duration="7585000" />
       <workItem from="1732365423839" duration="3689000" />
-      <workItem from="1732370319763" duration="599000" />
+      <workItem from="1732370319763" duration="8520000" />
     </task>
     <servers />
   </component>
