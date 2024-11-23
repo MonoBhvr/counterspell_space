@@ -47,6 +47,9 @@ TagManager:
   - name: Player
     uniqueID: 1540173893
     locked: 0
+  - name: Door
+    uniqueID: 2738164441
+    locked: 0
   - name: Pillar
     uniqueID: 28413011
     locked: 0

@@ -135,6 +135,11 @@ public class Player_controller : MonoBehaviour
         {
             fuel += fuel_consumption * Time.deltaTime * 0.3f;
         }
+
+        if(rb.velocity.x > 0)
+        {
+            rb.AddForce(Vector2.left * rb.velocity.x * 0.8f);
+        }
     }
 
     void set()
