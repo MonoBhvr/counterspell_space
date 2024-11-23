@@ -330,6 +330,7 @@ MonoBehaviour:
   player: {fileID: 1837861707}
   map_chosen: 0
   map: {fileID: 0}
+  map_room: 0000
 --- !u!4 &297734617
 Transform:
   m_ObjectHideFlags: 0
