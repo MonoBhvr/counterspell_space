@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player_controller : MonoBehaviour
+public class Player_movement : MonoBehaviour
 {
     
     private Rigidbody2D rb;
@@ -16,6 +16,9 @@ public class Player_controller : MonoBehaviour
     public Animator run;
     public bool on_charge = false;
     public ParticleSystem smoke;
+    public Image item_bar;
+    public bool has_item = false;
+    public GameObject item;
 
     public float speed = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -145,6 +148,15 @@ public class Player_controller : MonoBehaviour
     void set()
     {
         on_charge = true;
+    }
+
+    public void lost_item()
+    {
+        GameObject a = Instantiate(item, transform.position, Quaternion.identity);
+        a.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-2, 2), Random.Range(2, 4));
+        has_item = false;
+        a.GetComponent<SpriteRenderer>().sprite = item_bar.GetComponent<Image>().sprite;
+        item_bar.color = new Color(1, 1, 1, 0);
     }
 }
 
