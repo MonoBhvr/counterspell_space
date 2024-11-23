@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d9ac437-8dc1-4e9c-81aa-cbc3df91f5fc" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/camera_controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/camera_controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/map_repeat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/map_repeat.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,7 @@
       <updated>1732349144975</updated>
       <workItem from="1732349147202" duration="7585000" />
       <workItem from="1732365423839" duration="3689000" />
-      <workItem from="1732370319763" duration="8520000" />
+      <workItem from="1732370319763" duration="9329000" />
     </task>
     <servers />
   </component>
