@@ -11,6 +11,7 @@ TagManager:
   - 
   - Water
   - UI
+  - player
   - 
   - 
   - 
@@ -24,8 +25,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - paticle
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1540173893
+    locked: 0
+  - name: Pillar
+    uniqueID: 28413011
     locked: 0

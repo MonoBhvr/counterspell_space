@@ -15,6 +15,7 @@ public class Player_controller : MonoBehaviour
     public Image fuel_bar;
     public Animator run;
     public bool on_charge = false;
+    public ParticleSystem smoke;
 
     public float speed = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,6 +24,7 @@ public class Player_controller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         lr = GetComponent<LineRenderer>();
         run = GetComponent<Animator>();
+        smoke = transform.GetChild(0).GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -69,7 +71,7 @@ public class Player_controller : MonoBehaviour
 
             if (Input.GetKey(KeyCode.D) && rb.velocity.x < -0.5f)
             {
-                direction += Vector2.right * 1f;
+                direction += Vector2.right * 1.1f;
                 use_fuel = true;
             }
 
@@ -83,9 +85,18 @@ public class Player_controller : MonoBehaviour
                 run.SetBool("move_back", false);
             }
 
+            var emm = smoke.emission;
+
             if (direction == Vector2.zero)
             {
                 run.SetBool("on_move", false);
+                // emm.rateOverTime = 0;
+                smoke.Stop();
+
+            }
+            else{
+                // emm.rateOverTime = 120;
+                smoke.Play();
             }
 
             if (rb.velocity.x > -2)
