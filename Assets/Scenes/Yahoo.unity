@@ -5508,6 +5508,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on_clicK: 0
+  max_fuel: 100
+  fuel: 100
+  fuel_consumption: 1
+  fuel_bar: {fileID: 0}
+  run: {fileID: 0}
+  on_charge: 0
   speed: 1
 --- !u!70 &1919889536
 CapsuleCollider2D:
