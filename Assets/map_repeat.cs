@@ -20,10 +20,10 @@ public class map_repeat : MonoBehaviour
     {
         map_chosen = map_chosen % maps.Count;
         map = maps[map_chosen];
-        if (player.transform.position.x < map.transform.position.x - 74.36f)
+        if (player.transform.position.x < map.transform.position.x - 74.36f + 1.3f)
         {
             map_chosen++;
-            map.transform.position = new Vector3(map.transform.position.x - 74.36f * maps.Count, map.transform.position.y, map.transform.position.z);
+            map.transform.position = new Vector3(map.transform.position.x - (74.36f-1.3f) * maps.Count, map.transform.position.y, map.transform.position.z);
         }
     }
 }

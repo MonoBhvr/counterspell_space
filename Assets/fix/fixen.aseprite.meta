@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 97c52e538c0d32f4c9a30390e32dbf42
+guid: da7e6d1cfe5c2b84bbccab131d818ac9
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 32
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638680303285094239
+  platformSettingsDirtyTick: 638680302281585142
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Sprite-0005
+  - name: fixen
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 9
@@ -130,9 +130,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 16
-      height: 3
-    spriteID: 662ea202a943c39428f374969175b12c
+      width: 64
+      height: 61
+    spriteID: 4224eafb5c744d84a8165d18a48a67e9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,20 +144,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -572922799
-    name: Sprite-0005
+    guid: -311461094
+    name: fixen
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sprite-0005
+    - name: fixen
       frameIndex: 0
       cellRect:
-        x: 72
-        y: 63
-        width: 16
-        height: 3
-      spriteId: 662ea202a943c39428f374969175b12c
+        x: 0
+        y: 0
+        width: 64
+        height: 61
+      spriteId: 4224eafb5c744d84a8165d18a48a67e9
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -212,4 +212,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
+  canvasSize: {x: 64, y: 61}

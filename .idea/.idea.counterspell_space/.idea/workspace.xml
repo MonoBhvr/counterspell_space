@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0d9ac437-8dc1-4e9c-81aa-cbc3df91f5fc" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/7f-1long-1 (1).aseprite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/7f-1long-1 (1).aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ceiling Spark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ceiling Spark.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_movement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map_repeat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/map_repeat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1/Main Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1/Main Camera Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fix.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/go/dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/go/dead.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/camera_controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/fix.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/stamina_ui_follow.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -103,7 +107,7 @@
       <updated>1732349144975</updated>
       <workItem from="1732349147202" duration="7585000" />
       <workItem from="1732365423839" duration="3689000" />
-      <workItem from="1732370319763" duration="13807000" />
+      <workItem from="1732370319763" duration="27091000" />
     </task>
     <servers />
   </component>
