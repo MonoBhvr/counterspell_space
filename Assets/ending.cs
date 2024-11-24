@@ -21,20 +21,20 @@ public class ending : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+private void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.gameObject.CompareTag("Player") && GameObject.FindWithTag("fix").GetComponent<fix>().brocken <= 0 && !trigger)
     {
-        if (other.gameObject.CompareTag("Player") && GameObject.FindWithTag("fix").GetComponent<fix>().brocken <= 0 && !trigger)
-        {
-            trigger = true;
-            StartCoroutine(fade_out());
-        }
+        trigger = true;
+        StartCoroutine(fade_out());
     }
+}
 
     IEnumerator fade_out()
     {
-        while (canvasGroup.alpha > 0)
+        while (canvasGroup.alpha <1)
         {
-            canvasGroup.alpha -= Time.deltaTime;
+            canvasGroup.alpha += Time.deltaTime;
             yield return null;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

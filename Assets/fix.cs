@@ -30,27 +30,30 @@ public class fix : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && brocken > 0 && other.gameObject.GetComponent<Player_movement>().has_item)
+        if (other.gameObject.CompareTag("Player") && brocken >= 0 && other.gameObject.GetComponent<Player_movement>().has_item)
         {
             brocken -= Time.deltaTime * 4;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")&& brocken > 0 && other.gameObject.GetComponent<Player_movement>().has_item)
+        if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Animator>().SetBool("on_fix", false);
-            other.gameObject.GetComponent<Player_movement>().lost_item();
+            if(player.has_item)
+                other.gameObject.GetComponent<Player_movement>().lost_item();
             StartCoroutine(fade(0));
-
+            player.on_charge = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")&& brocken > 0 && other.gameObject.GetComponent<Player_movement>().has_item)
+        if (other.gameObject.CompareTag("Player")&& brocken >= 0 && other.gameObject.GetComponent<Player_movement>().has_item)
         {
             other.gameObject.GetComponent<Animator>().SetBool("on_fix", true);
             StartCoroutine(fade(1));
+            player.rb.velocity = player.rb.velocity * 0.5f;
+            player.on_charge = false;
         }
     }
 

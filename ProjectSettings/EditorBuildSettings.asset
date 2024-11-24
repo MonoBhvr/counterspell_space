@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start_Screen.unity
     guid: a5f77ea757bfa404cbc57d57caaddb2c
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/SampleScene 1.unity
+    guid: c6a513fb00c4f764b9669036942e0631
+  - enabled: 1
+    path: Assets/Scenes/UpRoom.unity
+    guid: e3c673f86d932484bbb599cbf3807c0f
   m_configObjects: {}
