@@ -18,18 +18,14 @@ public class tool_box : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (taken <= 0)
-        {
-            player.GetComponent<Player_movement>().item_bar.GetComponent<Image>().sprite = items[Random.Range(0, items.Count)];
-            taken = 10;
-        }
+        
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && taken > 0)
+        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.Space))
         {
-            taken -= Time.deltaTime * 2;
+            player.GetComponent<Player_movement>().item_bar.GetComponent<Image>().sprite = items[Random.Range(0, items.Count)];
         }
     }
     private void OnTriggerExit2D(Collider2D other)

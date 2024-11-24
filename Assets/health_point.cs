@@ -12,6 +12,7 @@ public class health_point : MonoBehaviour
     public GameObject hp_bar;
 
     public bool on_damage = false;
+    public bool isdead = false;
     void Update()
     {
         hp_bar.transform.localScale = Vector3.Lerp(hp_bar.transform.localScale, new Vector3(0.5f * hp / max_hp, 0.05f, 1), 0.2f);
@@ -26,6 +27,23 @@ public class health_point : MonoBehaviour
         {
             //change alpha 1 to 0
             hp_bar.GetComponent<SpriteRenderer>().color = new Color(hp_bar.GetComponent<SpriteRenderer>().color.r, hp_bar.GetComponent<SpriteRenderer>().color.g, hp_bar.GetComponent<SpriteRenderer>().color.b, Mathf.Lerp(hp_bar.GetComponent<SpriteRenderer>().color.a, 0, 6f * Time.deltaTime));
+        }
+
+        if (hp <= 0 && !isdead)
+        {
+            GetComponent<Animator>().SetBool("dead", true);
+            Destroy(GetComponent<Player_movement>());
+            GetComponent<Animator>().SetTrigger("die");
+            isdead = true;
+            Destroy(GameObject.Find("Canvas"));
+        }
+
+        if (isdead)
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))    //change scene
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+            }
         }
     }
 

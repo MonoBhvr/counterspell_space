@@ -8,8 +8,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player_movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_movement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/blocks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/blocks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fix.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fix/broken.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fix/broken.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fix/fixen.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fix/fixen.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/health_point.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/health_point.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/item/Sprite-0004.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/item/Sprite-0004.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/item/Sprite-0005.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/item/Sprite-0005.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/item/Sprite-0006.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/item/Sprite-0006.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/map_repeat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/map_repeat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tool.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tool.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tool_box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tool_box.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +114,7 @@
       <updated>1732349144975</updated>
       <workItem from="1732349147202" duration="7585000" />
       <workItem from="1732365423839" duration="3689000" />
-      <workItem from="1732370319763" duration="19084000" />
+      <workItem from="1732370319763" duration="25260000" />
     </task>
     <servers />
   </component>

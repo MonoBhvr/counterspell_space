@@ -152,10 +152,12 @@ public class Player_movement : MonoBehaviour
 
     public void lost_item()
     {
+        if (item_bar.GetComponent<Image>().sprite == null) return;
         GameObject a = Instantiate(item, transform.position, Quaternion.identity);
         a.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-2, 2), Random.Range(2, 4));
         has_item = false;
         a.GetComponent<SpriteRenderer>().sprite = item_bar.GetComponent<Image>().sprite;
-        item_bar.color = new Color(1, 1, 1, 0);
+        item_bar.GetComponent<Image>().sprite = null;
+        // item_bar.color = new Color(1, 1, 1, 0);
     }
 }
