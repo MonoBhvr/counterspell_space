@@ -20,6 +20,10 @@ public class next : MonoBehaviour
     {
         
     }
+    public void next_scene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -34,7 +38,7 @@ public class next : MonoBehaviour
     {
         while (canvasGroup.alpha <1)
         {
-            canvasGroup.alpha += Time.deltaTime;
+            canvasGroup.alpha += Time.deltaTime * 3;
             yield return null;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

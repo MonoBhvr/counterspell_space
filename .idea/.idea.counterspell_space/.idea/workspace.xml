@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d9ac437-8dc1-4e9c-81aa-cbc3df91f5fc" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UpRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UpRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Button.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FinalScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FinalScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start_Screen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start_Screen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/blocks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/blocks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/next.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/next.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +106,7 @@
       <updated>1732349144975</updated>
       <workItem from="1732349147202" duration="7585000" />
       <workItem from="1732365423839" duration="3689000" />
-      <workItem from="1732370319763" duration="27900000" />
+      <workItem from="1732370319763" duration="28563000" />
     </task>
     <servers />
   </component>

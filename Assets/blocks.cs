@@ -8,10 +8,12 @@ public class blocks : MonoBehaviour
     public float speed = 10;
     Rigidbody2D rb;
     map_repeat map_repeat;
+    public List<Sprite> blocks_;
     
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<SpriteRenderer>().sprite = blocks_[UnityEngine.Random.Range(0, blocks_.Count)];
         rb = GetComponent<Rigidbody2D>();
         map_repeat = GameObject.Find("Map").GetComponent<map_repeat>();
     }
