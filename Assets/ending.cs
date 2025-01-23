@@ -7,28 +7,33 @@ using UnityEngine.SceneManagement;
 public class ending : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
+    private fix f;
 
     public bool trigger = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        f = GameObject.FindWithTag("fix").GetComponent<fix>();
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (f.brocken <= 0)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
-private void OnTriggerEnter2D(Collider2D other)
-{
-    if (other.gameObject.CompareTag("Player") && GameObject.FindWithTag("fix").GetComponent<fix>().brocken <= 0 && !trigger)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        trigger = true;
-        StartCoroutine(fade_out());
+        if (other.gameObject.CompareTag("Player") && f.brocken <= 0 && !trigger)
+        {
+            trigger = true;
+            StartCoroutine(fade_out());
+        }
     }
-}
 
     IEnumerator fade_out()
     {

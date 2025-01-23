@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class health_point : MonoBehaviour
@@ -13,6 +14,16 @@ public class health_point : MonoBehaviour
 
     public bool on_damage = false;
     public bool isdead = false;
+    
+    public CanvasGroup canvasGroup;
+    public GameObject text;
+
+    private GameObject s;
+    public void Start()
+    {
+        s = GameObject.Find("Canvas");
+        text.SetActive(false);
+    }
     void Update()
     {
         hp_bar.transform.localScale = Vector3.Lerp(hp_bar.transform.localScale, new Vector3(0.5f * hp / max_hp, 0.05f, 1), 0.2f);
@@ -35,11 +46,24 @@ public class health_point : MonoBehaviour
             Destroy(GetComponent<Player_movement>());
             GetComponent<Animator>().SetTrigger("die");
             isdead = true;
-            Destroy(GameObject.Find("Canvas"));
+            Destroy(s.transform.GetChild(0).gameObject);
+            Destroy(s.transform.GetChild(1).gameObject);
         }
+    }
 
+    private void FixedUpdate()
+    {
         if (isdead)
         {
+            text.SetActive(true);
+            canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 1, 0.5f * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, 0, transform.position.z), 0.5f);
+
+            if (canvasGroup.alpha >= 0.9f)
+            {
+                Camera.main.cullingMask = 0;
+            }
+
             if(Input.GetKeyDown(KeyCode.Escape))    //change scene
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);

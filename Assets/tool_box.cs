@@ -25,7 +25,9 @@ public class tool_box : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.Space))
         {
-            player.GetComponent<Player_movement>().item_bar.GetComponent<Image>().sprite = items[Random.Range(0, items.Count)];
+            Image item = player.GetComponent<Player_movement>().item_bar.GetComponent<Image>();
+            item.sprite = items[Random.Range(0, items.Count)];
+            item.SetNativeSize();
         }
     }
     private void OnTriggerExit2D(Collider2D other)

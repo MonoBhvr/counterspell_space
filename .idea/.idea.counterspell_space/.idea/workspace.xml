@@ -6,12 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0d9ac437-8dc1-4e9c-81aa-cbc3df91f5fc" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.counterspell_space/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Button.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FinalScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FinalScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Floor_reflect.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Floor_reflect.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Render Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Render Texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_movement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start_Screen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start_Screen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/blocks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/blocks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/next.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/next.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ending.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ending.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fix.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fix/fix.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fix/fix.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/health_point.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/health_point.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/stamina_ui_follow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/stamina_ui_follow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tool_box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tool_box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/camera_controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/fix.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/stamina_ui_follow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/up_down.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -63,6 +70,14 @@
       <option name="EXE_PATH" value="D:\Unity_Downloads\2022.3.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\counterspell_space -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\counterspell_space" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../counterspell_build/csp_space.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\counterspell_build" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -107,6 +122,9 @@
       <workItem from="1732349147202" duration="7585000" />
       <workItem from="1732365423839" duration="3689000" />
       <workItem from="1732370319763" duration="28563000" />
+      <workItem from="1737186899313" duration="2680000" />
+      <workItem from="1737550615269" duration="326000" />
+      <workItem from="1737551015965" duration="8916000" />
     </task>
     <servers />
   </component>

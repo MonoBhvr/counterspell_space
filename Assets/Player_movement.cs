@@ -97,7 +97,12 @@ public class Player_movement : MonoBehaviour
                 smoke.Stop();
 
             }
-            else{
+            else if(fuel < 0 && on_charge)
+            {
+                smoke.Stop();
+            }
+            else
+            {
                 // emm.rateOverTime = 120;
                 smoke.Play();
             }
@@ -167,7 +172,7 @@ public class Player_movement : MonoBehaviour
     public void lost_item()
     {
         if (item_bar.GetComponent<Image>().sprite == null) return;
-        GameObject a = Instantiate(item, transform.position, Quaternion.identity);
+        GameObject a = Instantiate(item, transform.position + Vector3.left*1.5f, Quaternion.identity);
         a.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-2, 2), Random.Range(2, 4));
         has_item = false;
         a.GetComponent<SpriteRenderer>().sprite = item_bar.GetComponent<Image>().sprite;

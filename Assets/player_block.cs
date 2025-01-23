@@ -1,20 +1,16 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class blocks : MonoBehaviour
+public class player_block : MonoBehaviour
 {
     public float speed = 10;
     Rigidbody2D rb;
     map_repeat map_repeat;
-    public List<Sprite> blocks_;
     
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = blocks_[Random.Range(0, blocks_.Count)];
         rb = GetComponent<Rigidbody2D>();
         map_repeat = GameObject.Find("Map").GetComponent<map_repeat>();
         transform.rotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
@@ -33,13 +29,18 @@ public class blocks : MonoBehaviour
         {
             GameObject a = Instantiate(gameObject);
             Destroy(a.GetComponent<blocks>());
-            Destroy(a, 0.10f);
+            Destroy(a, 0.01f);
             transform.position = new Vector3(transform.position.x + 74.36f * map_repeat.maps.Count, transform.position.y, transform.position.z);
         }
         //뒤로 벗어나면 앞으로 이동
         if (map_repeat.map.transform.position.x + 74.36f*0.5f < transform.position.x)
         {
             transform.position = new Vector3(transform.position.x - 74.36f * map_repeat.maps.Count, transform.position.y, transform.position.z);
+        }
+
+        if (rb.velocity.magnitude < 0.01f)
+        {
+            Destroy(gameObject);
         }
     }
 }
